@@ -9,7 +9,7 @@ A comprehensive design and implementation of a Solid State Transformer for moder
 
 ![SST Overview](images/SST.png)
 
-## 🔋 Overview
+## Overview
 
 Solid State Transformers represent the next generation of power conversion technology, offering significant advantages over traditional magnetic transformers including:
 
@@ -19,7 +19,7 @@ Solid State Transformers represent the next generation of power conversion techn
 - **Power Quality Enhancement**: Active filtering and voltage regulation
 - **Bidirectional Power Flow**: Support for renewable energy integration
 
-## ✨ Features
+## Features
 
 - **Multi-Stage Architecture**: Optimized AC-DC-AC conversion topology
 - **High-Frequency Isolation**: Compact magnetic components operating at elevated frequencies
@@ -28,7 +28,7 @@ Solid State Transformers represent the next generation of power conversion techn
 - **Modular Design**: Scalable architecture for various power ratings
 - **Communication Interface**: Integration with smart grid protocols
 
-## 🏗️ System Architecture
+## System Architecture
 
 The SST design implements a three-stage conversion topology:
 
@@ -47,7 +47,7 @@ The SST design implements a three-stage conversion topology:
 | Switching Frequency | 20-100 | kHz |
 | THD | <3 | % |
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 SolidStateTransformer/
@@ -59,7 +59,7 @@ SolidStateTransformer/
 └── README.md              # This file
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -79,7 +79,7 @@ cd SolidStateTransformer
 3. Load simulation files in MATLAB/Simulink or SPICE simulator
 4. Review the design documentation and specifications
 
-## 🔬 Simulation and Analysis
+## Simulation and Analysis
 
 The project includes comprehensive simulation models for:
 
@@ -95,7 +95,7 @@ The project includes comprehensive simulation models for:
 3. Configure simulation parameters as needed
 4. Run analysis and review results
 
-## 🛠️ Hardware Implementation
+## Hardware Implementation
 
 ### PCB Design
 
@@ -114,58 +114,13 @@ Key components include:
 - **Control ICs**: Digital signal processors for real-time control
 - **Protection Devices**: Fuses, surge suppressors, and monitoring circuits
 
-## 📊 Performance Results
-
-Expected performance characteristics:
-- **Efficiency**: >95% across 25-100% load range
-- **Power Density**: >2 kW/L
-- **Response Time**: <1ms for load transients
-- **Reliability**: >100,000 hours MTBF
-
-## 🔧 Testing and Validation
-
-Recommended test procedures:
-1. **Functional Testing**: Basic operation verification
-2. **Performance Testing**: Efficiency and power quality measurements
-3. **Thermal Testing**: Temperature rise and cooling effectiveness
-4. **EMC Testing**: Electromagnetic compatibility verification
-5. **Safety Testing**: Isolation and protection system validation
-
-## 🤝 Contributing
-
-Contributions to improve the design are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
-### Contribution Guidelines
-
-- Follow existing code and documentation style
-- Include simulation results for design changes
-- Update documentation as needed
-- Ensure all tests pass before submitting
-
-## 📚 References and Further Reading
-
-- IEEE Standards for Power Electronics
-- SiC and GaN Device Application Notes
-- High-Frequency Magnetic Design Guidelines
-- Smart Grid Integration Protocols
-
-## 🏆 Acknowledgments
-
-Special thanks to the power electronics research community and industry partners who have contributed to the advancement of solid state transformer technology.
-
-## 📄 License
+## License
 
 This project is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)** - see the [LICENSE.md](LICENSE.md) file for details.
 
 **Copyright © 2025 Fulong Li**
 
-## 📞 Contact
+## Contact
 
 **[Fulong Li](https://fulongli.github.io/)**
 
