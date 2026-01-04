@@ -53,6 +53,10 @@ The SST design implements a three-stage conversion topology:
 SolidStateTransformer/
 ├── PCB/                    # PCB design files and layouts
 ├── simulations/            # SPICE/MATLAB simulation files
+├── code/                   # Python analysis and simulation code
+│   ├── sst_analysis.py           # SST analysis module
+│   ├── DAB_inductor_selection.py # DAB inductor selection tool
+│   └── requirements.txt          # Python dependencies
 ├── references/             # Technical papers and design references
 ├── images/                 # Project images and diagrams
 ├── LICENSE.md             # License information
@@ -65,7 +69,7 @@ SolidStateTransformer/
 
 - **Design Software**: Altium Designer, KiCad, or equivalent PCB design tool
 - **Simulation Tools**: MATLAB/Simulink, LTspice, or PLECS
-- **Programming Environment**: For control algorithm development
+- **Programming Environment**: Python 3.7+ for analysis scripts (optional)
 
 ### Installation
 
@@ -77,7 +81,12 @@ cd SolidStateTransformer
 
 2. Open the PCB design files in your preferred EDA tool
 3. Load simulation files in MATLAB/Simulink or SPICE simulator
-4. Review the design documentation and specifications
+4. (Optional) Install Python dependencies for analysis tools:
+```bash
+cd code
+pip install -r requirements.txt
+```
+5. Review the design documentation and specifications
 
 ## Simulation and Analysis
 
@@ -94,6 +103,54 @@ The project includes comprehensive simulation models for:
 2. Open the main simulation file in your preferred tool
 3. Configure simulation parameters as needed
 4. Run analysis and review results
+
+### Python Analysis Tools
+
+The project includes Python-based analysis tools for SST performance evaluation:
+
+**Available Modules:**
+
+1. **sst_analysis.py** - General SST analysis and simulation
+   - Power loss calculation and breakdown
+   - DC link voltage and transformer turns ratio calculation
+   - Switching loss analysis
+   - Harmonic distortion (THD) analysis
+   - Thermal analysis
+   - Power efficiency plotting
+
+2. **DAB_inductor_selection.py** - Dual Active Bridge inductor design
+   - Inductor value calculation based on power and phase shift
+   - Current ripple and RMS/peak current analysis
+   - Power transfer calculations
+   - Loss analysis (copper and core losses)
+   - Design optimization and constraint checking
+   - Visualization tools for design trade-offs
+
+**Usage:**
+```bash
+cd code
+python sst_analysis.py
+python DAB_inductor_selection.py
+```
+
+**Example - SST Analysis:**
+```python
+from sst_analysis import SSTAnalyzer, SSTParameters
+
+params = SSTParameters(input_voltage=400, output_voltage=208, power_rating=10)
+analyzer = SSTAnalyzer(params)
+losses = analyzer.calculate_power_losses(10.0)
+```
+
+**Example - DAB Inductor Selection:**
+```python
+from DAB_inductor_selection import DABInductorSelector, DABParameters
+import numpy as np
+
+params = DABParameters(v1=600, v2=400, power=10, switching_frequency=50)
+selector = DABInductorSelector(params)
+inductor = selector.select_inductor(phase_shift=np.pi/3)
+```
 
 ## Hardware Implementation
 
